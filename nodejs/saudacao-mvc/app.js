@@ -13,6 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
+const usersRoutes = require('./routes/users');
+app.use('/users', usersRoutes);
+
+const produtosRoutes = require('./routes/produtos');
+app.use('/produtos', produtosRoutes);
+
 // Servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
