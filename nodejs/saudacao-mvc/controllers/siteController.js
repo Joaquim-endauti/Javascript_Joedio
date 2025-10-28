@@ -10,16 +10,16 @@ module.exports = {
   },
 
   saudacao: (req, res) => {
-    const { nome, idade, elo } = req.body;
-    const mensagem = saudacaoModel.gerarMensagemPersonalizada(nome, idade, elo);
+    const { nome, idade, mainlol} = req.body;
+    const mensagem = saudacaoModel.gerarMensagemPersonalizada(nome, idade, mainlol);
     res.send(`<h1>${mensagem}</h1>`);
   },
 
     produtos: (req, res) => {
-    res.sendFile('produtos.html', { root: './views'});
+    res.sendFile('produtos.html', { root: './views' });
   },
-    
+
     camisetas: (req, res) => {
-    res.sendFile('camisetas.html', { root: './views'});
+    res.sendFile('camisetas.html', { root: './views' });
   }
 };
